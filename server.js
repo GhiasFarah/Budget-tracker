@@ -6,7 +6,8 @@ const compression = require("compression");
 const PORT = process.env.PORT || 3001;
 // Added username and password for atlasDB live mongo database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
-
+// Added MONGOD_URI code to heroku
+// Deployed functioning application to heroku
 const app = express();
 
 app.use(logger("dev"));
