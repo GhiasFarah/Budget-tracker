@@ -1,7 +1,7 @@
 const APP_ = 'Budget-Tracker-';     
 const VER = 'v1';
-const CACHE_NAME = APP + VER
-const FILES_TO_CACHE = [
+const CACHE_NAME = APP_ + VER
+const CACHE = [
   "/",
   "../index.html",
   "./index.js",
@@ -41,7 +41,7 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log('installing cache : ' + CACHE_NAME)
-      return cache.addAll(FILES_TO_CACHE)
+      return cache.addAll(CACHE)
     })
   )
 })
